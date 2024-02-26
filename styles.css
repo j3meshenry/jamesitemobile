@@ -1,49 +1,41 @@
 /* Styles for the Welcome page */
 .welcome-page {
-    background-image: url('daytime.JPEG');
+    background-image: url('welcomemobile.JPEG');
     background-size: cover;
     background-position: center;
-}
-/* Styles for the Welcome page in night mode */
-body.night-mode .welcome-page {
-    background-image: url('nighttime.JPEG');
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
 }
 
 /* Style for the image in the Welcome section */
 .welcome-image {
-    width: 200px;
-    height: auto;
-    transform: translateX(-700px);
+    width: 25vh; /* Adjust width based on viewport height */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Position the image vertically centered */
+    left: -25vh; /* Initial position off the left side of the viewport */
     animation: floatAnimation 5s linear infinite;
 }
-/* Day mode styles 
-.toggleBtn {
-    background-image: url('SunToggle.PNG');
-}
 
-/* Night mode styles 
-.toggleBtn {
-    background-image: url('MoonToggle.png');
-}*/
 
 /* Define keyframes for the animation */
 @keyframes floatAnimation {
     0% {
-        transform: translate(-700px, 200px);
+        transform: translateX(-25vh); /* Initial position off the left side */
     }
-    50%{
-        transform: translate(.50, 200px);
+    50% {
+        transform: translateX(50vw); /* Mid position */
     }
     100% {
-        transform: translate(700px, 200px);
+        transform: translateX(125vw); /* Final position off the right side */
     }
 }
 
 .celestial-body {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
+    top: 5vw; /* Adjust top position based on viewport width */
+    left: 5vw; /* Adjust left position based on viewport width */
+    width: 10vw; /* Adjust width based on viewport width */
     animation: scaleInOut 10s infinite alternate;
 }
 
@@ -66,49 +58,4 @@ body.night-mode .welcome-page {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-}
-
-.toggle-btn {
-    position: fixed;
-    bottom: 20px;
-    right: -10px;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 180px;
-    height: 100px;
-}
-
-/* Day mode styles */
-.toggle-btn {
-    position: fixed;
-    bottom: 0px;
-    right: 20px;
-    width: 70px; /* Adjust width as needed */
-    height: 70px; /* Adjust height as needed */
-    background-image: url('SunToggle.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    z-index: 1000; /* Ensure button appears on top */
-}
-
-/* Night mode styles */
-body.night-mode .toggle-btn {
-    position: fixed;
-    bottom: 0px;
-    right: 20px;
-    width: 70px; /* Adjust width as needed */
-    height: 70px; /* Adjust height as needed */
-    background-image: url('MoonToggle.PNG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    z-index: 1000; /* Ensure button appears on top */
 }

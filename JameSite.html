@@ -25,34 +25,15 @@
         }
     </style>
 </head>
-<!-- Hamburger menu icon -->
-<div class="mobile-menu-icon" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-</div>
-
-<!-- Scroll Links (inside a mobile menu) -->
-<div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#project1">Projects</a>
-    <a href="#socials">Socials</a>
-</div>
 <body class="welcome-page">
-    <!-- Toggle button -->
-    <button class="toggle-btn" onclick="toggleMode()" id="toggleBtn"></button>
     <!-- Cover Section -->
     <div class="section">
-        <!-- Sun image -->
-        <img src="sun.png" alt="Sun" class="celestial-body" id="celestialBody">
+        <!-- Moon image -->
+        <img src="moon.PNG" alt="Moon" class="celestial-body" id="celestialBody">
         <!-- Your content goes here -->
         <div class="content-wrapper">
-            <h1>James Henry</h1>
-            <!-- -->
             <img src="AstronautPaperPlane.PNG" alt="Welcome Image" class="welcome-image" id="welcomeImage">
         </div>
-        <!-- Toggle button -->
-        <button class="toggle-btn" onclick="toggleMode()" id="toggleBtn"></button>
     </div>
 
     <!-- About Section -->
@@ -79,45 +60,5 @@
         <p><a href="https://github.com/j3meshenry"><img src="github.png" alt="GitHub" class="logo"></a></p>
         <p><a href="mailto:jameshenry482@gmail.com"><img src="gmail.png" alt="Email" class="logo"></a></p>
     </div>
-
-    <!-- Scroll Links -->
-    <div class="scroll-links">
-        <a href="#about">About</a>
-        <a href="#project1">Projects</a>
-        <a href="#socials">Socials</a>
-    </div>
-
-    <!-- JavaScript for mode toggling -->
-    <script>
-        var mode = 'day'; // Default mode
-
-        function toggleMode() {
-            var body = document.body;
-            var toggleBtn = document.getElementById('toggleBtn');
-            var welcomeImage = document.getElementById('welcomeImage');
-
-            if (mode === 'day') {
-                // Switch to night mode
-                body.classList.add('night-mode');
-                toggleBtn.style.backgroundImage = 'url(NightModeToggleImage.PNG)'; // Night mode toggle button image
-                welcomeImage.src = 'AstronautRocket.PNG'; // Change the welcome image for night mode
-                body.style.backgroundImage = 'url(nighttime.jpeg)'; // Change background image for night mode
-                mode = 'night';
-            } else {
-                // Switch to day mode
-                body.classList.remove('night-mode');
-                toggleBtn.style.backgroundImage = 'url(DayModeToggleImage.PNG)'; // Day mode toggle button image
-                welcomeImage.src = 'AstronautPaperPlane.PNG'; // Change back to the default welcome image for day mode
-                body.style.backgroundImage = 'url(daytime.jpeg)'; // Change background image for day mode
-                mode = 'day';
-            }
-        }
-
-        // Set initial button image based on the default mode
-        document.getElementById('toggleBtn').style.backgroundImage = mode === 'day' ? 'url(SunToggle.png)' : 'url(MoonToggle.PNG)';
-
-        // Add event listener to the button
-        document.getElementById('toggleBtn').addEventListener('click', toggleMode);
-    </script>
 </body>
 </html>
