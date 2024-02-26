@@ -1,0 +1,156 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section {
+    height: 115vh;
+    scroll-snap-align: start;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Style for the scroll links */
+.scroll-links {
+    position: absolute;
+    top: 12%;
+    right: 5px;
+    z-index: 1000;
+    transform: translateY(-50%);
+}
+
+.scroll-links a {
+    margin-right: 160px;
+}
+
+/* Styles for the About, Socials, and Projects sections */
+#about {
+    background-image: url('aboutdaymode.JPEG');
+    background-size: cover;
+    background-position: center;
+}
+
+#project1 {
+    background-image: url('project1day.JPEG');
+    background-size: cover;
+    background-position: center;
+}
+
+#project2{
+    background-image: url('project2day.JPEG');
+    background-size: cover;
+    background-position: center;
+}
+
+#project3{
+    background-image: url('project3day.JPEG');
+    background-size: cover;
+    background-position: center;
+}
+
+#project4{
+    background-image: url('project4day.JPEG');
+    background-size: cover;
+    background-position: center;
+}
+
+#socials {
+    background-image: url('spacebackground.png');
+    background-size: cover;
+    background-position: center;
+}
+/* Styles for the About, Socials, and Projects sections in night mode */
+body.night-mode #about {
+    background-image: url('aboutnightmode.JPEG');
+}
+
+body.night-mode #project1 {
+    background-image: url('project1night.JPEG');
+}
+
+body.night-mode #project2 {
+    background-image: url('project2night.JPEG');
+}
+
+body.night-mode #project3 {
+    background-image: url('project3night.JPEG');
+}
+
+body.night-mode #project4 {
+    background-image: url('project4night.JPEG');
+}
+
+body.night-mode #socials {
+    background-image: url('spacebackground.png');
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Hamburger menu icon styles */
+.mobile-menu-icon {
+    display: none; /* Hide by default on larger screens */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none; /* Hide by default */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block; /* Show the hamburger menu icon on smaller screens */
+        cursor: pointer;
+    }
+
+    .scroll-links {
+        display: none; /* Hide the scroll links on smaller screens */
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #333; /* Background color for the mobile menu */
+        width: 70%; /* Adjust the width as needed */
+        height: 100vh;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .show-menu {
+        transform: translateX(0); /* Show the mobile menu */
+    }
+}
