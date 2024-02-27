@@ -1,145 +1,141 @@
-.section {
-    overflow: auto;
+
 /* Styles for the Welcome page */
-    .welcome-page {
-        background-image: url('welcomemobile.JPEG');
-        background-size: cover;
-        background-position: center;
-        width: 100vw; /* Set width to full viewport width */
-        height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
+.welcome-page {
+    background-image: url('welcomemobile.JPEG');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 100vh; /* Set height to full viewport height */
+}
+/* Style for the image in the Welcome section */
+.welcome-image {
+    width: 25vh; /* Adjust width based on viewport height */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Position the image vertically centered */
+    left: -25vh; /* Initial position off the left side of the viewport */
+    animation: floatAnimation 5s linear infinite;
+}
+
+
+/* Define keyframes for the animation */
+@keyframes floatAnimation {
+    0% {
+        transform: translateX(-25vh); /* Initial position off the left side */
     }
-    
-    /* Style for the image in the Welcome section */
-    .welcome-image {
-        width: 25vh; /* Adjust width based on viewport height */
-        height: auto; /* Maintain aspect ratio */
-        position: absolute; /* Position the image absolutely */
-        top: 50%; /* Position the image vertically centered */
-        left: -25vh; /* Initial position off the left side of the viewport */
-        animation: floatAnimation 5s linear infinite;
+    50% {
+        transform: translateX(50vw); /* Mid position */
     }
-    
-    
-    /* Define keyframes for the animation */
-    @keyframes floatAnimation {
-        0% {
-            transform: translateX(-25vh); /* Initial position off the left side */
-        }
-        50% {
-            transform: translateX(50vw); /* Mid position */
-        }
-        100% {
-            transform: translateX(125vw); /* Final position off the right side */
-        }
-    }
-    
-    .celestial-body {
-        position: absolute;
-        top: 5vw; /* Adjust top position based on viewport width */
-        left: 5vw; /* Adjust left position based on viewport width */
-        width: 10vw; /* Adjust width based on viewport width */
-        animation: scaleInOut 10s infinite alternate;
-    }
-    
-    @keyframes scaleInOut {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.5);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-    
-    .content-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-    }
-    
-    /* General styles */
-    body {
-        margin: 0;
-        padding: 0;
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
-    
-    .section {
-        height: 115vh;
-        scroll-snap-align: start;
-        overflow-y: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: white;
-        font-size: 1.5em;
-        text-align: center;
-    }
-    
-    #socials {
-        background-image: url('spacebackground.png');
-        background-size: cover;
-        background-position: center;
-    }
-    /* Styles for the About, Socials, and Projects sections in night mode */
-    #about {
-        background-image: url('aboutmobile.JPEG');
-        background-size: cover;
-        background-position: center;
-        width: 100vw; /* Set width to full viewport width */
-        height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
-    }
-    #project1 {
-        background-image: url('project1mobile.JPEG');
-        background-size: cover;
-        background-position: center;
-        width: 100vw; /* Set width to full viewport width */
-        height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
-    }
-    
-    #project2 {
-        background-image: url('project2mobile.JPEG');
-        background-size: cover;
-        background-position: center;
-        width: 100vw; /* Set width to full viewport width */
-        height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
-    }
-    
-    #project3 {
-        background-image: url('project3mobile.JPEG');
-        background-size: cover;
-        background-position: center;
-        width: 100vw; /* Set width to full viewport width */
-        height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
-    }
-    
-    #project4 {
-        background-image: url('project4mobile.JPEG');
-        background-size: cover;
-        background-position: center;
-        width: 100vw; /* Set width to full viewport width */
-        height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
-    }
-    
-    #socials {
-        background-image: url('spacebackground.png');
-        background-size: cover;
-        background-position: center;
+    100% {
+        transform: translateX(125vw); /* Final position off the right side */
     }
 }
-    
-    .logo {
-        width: 100px; /* Adjust the width as needed */
-        height: auto; /* Maintain aspect ratio */
+
+.celestial-body {
+    position: absolute;
+    top: 5vw; /* Adjust top position based on viewport width */
+    left: 5vw; /* Adjust left position based on viewport width */
+    width: 10vw; /* Adjust width based on viewport width */
+    animation: scaleInOut 10s infinite alternate;
+}
+
+@keyframes scaleInOut {
+    0% {
+        transform: scale(1);
     }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section {
+    height: 115vh;
+    scroll-snap-align: start;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+#socials {
+    background-image: url('spacebackground.png');
+    background-size: cover;
+    background-position: center;
+}
+/* Styles for the About, Socials, and Projects sections in night mode */
+#about {
+    background-image: url('aboutmobile.JPEG');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
+}
+#project1 {
+    background-image: url('project1mobile.JPEG');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
+}
+
+#project2 {
+    background-image: url('project2mobile.JPEG');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
+}
+
+#project3 {
+    background-image: url('project3mobile.JPEG');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
+}
+
+#project4 {
+    background-image: url('project4mobile.JPEG');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
+}
+
+#socials {
+    background-image: url('spacebackground.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
