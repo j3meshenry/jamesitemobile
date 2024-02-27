@@ -95,30 +95,39 @@ body {
     background-image: url('aboutmobile.JPEG');
     background-size: cover;
     background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
 }
-
 #project1 {
     background-image: url('project1mobile.JPEG');
     background-size: cover;
     background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
 }
 
 #project2 {
     background-image: url('project2mobile.JPEG');
     background-size: cover;
     background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
 }
 
 #project3 {
     background-image: url('project3mobile.JPEG');
     background-size: cover;
     background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
 }
 
 #project4 {
     background-image: url('project4mobile.JPEG');
     background-size: cover;
     background-position: center;
+    width: 100vw; /* Set width to full viewport width */
+    height: 177.78vw; /* Set height to maintain 9x16 aspect ratio (100vw * 9 / 16) */
 }
 
 #socials {
