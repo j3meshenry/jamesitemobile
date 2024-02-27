@@ -52,7 +52,7 @@
 }
 
 .content-wrapper {
-    position: absolute;
+    position: relative; /* Position the content wrapper relative to its normal position */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -73,7 +73,7 @@ body {
 }
 
 .section {
-    height: 115vh;
+    height: 100vh; /* Set height to full viewport height */
     scroll-snap-align: start;
     overflow-y: auto;
     display: flex;
